@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input, textarea {
+  border-width: 2px;
+  border-color: #d1d5db; /* border-gray-300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  padding-left: 0.5rem; /* px-2 */
+  padding-right: 0.5rem; /* px-2 */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  width: 100%; /* w-full */
+  margin-bottom: 0.5rem; /* mb-2 */
+  color: black;
+}
+
+input:focus, textarea:focus {
+  border-color: #1e3a8a; /* border-blue-900 */
+  color: black; /* text-black */
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ededed;
+    --foreground: #0a0a0a;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #1e3a8a; /* text-blue-900 */
+  margin-bottom: 0.5rem; /* mb-2 */
+  font-size: 1.25rem; /* text-xl */
+  letter-spacing: 0.05em; /* tracking-tight */
+}
+
+label{
+  @apply text-blue-900;
+}
+
+.btn-primary{
+  @apply bg-blue-900 text-white px-4 py-1 rounded-lg;
+}
+
+table.basic{
+  @apply w-full;
+}
+
+table.basic thead tr td{
+  @apply bg-blue-100;
+}
+
+table.basic tr td{
+  @apply border border-blue-200 p-2;
+}
+
+table.basic a{
+  @apply bg-blue-900 text-white px-2 py-1 rounded-lg text-sm
+  inline-flex gap-1 mr-1;
+}
+
+.btn-red, .btn-default{
+  @apply px-4 py-1 rounded-lg;
+}
+
+.btn-red{
+  @apply bg-red-600 text-white;
+}
+
+.btn-default{
+  @apply bg-gray-500 text-white;
+}
